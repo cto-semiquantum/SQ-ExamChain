@@ -16,17 +16,7 @@
 
 </div>
 
----
 
-## 📸 Screenshots
-
-| Login | Admin Dashboard | Center Portal |
-|:---:|:---:|:---:|
-| ![Login](docs/screenshots/login.png) | ![Admin](docs/screenshots/admin_dashboard.png) | ![Center](docs/screenshots/center.png) |
-
-| Upload with Time-Lock | Leak Investigation | Audit Logs |
-|:---:|:---:|:---:|
-| ![Upload](docs/screenshots/upload.png) | ![Investigate](docs/screenshots/investigate.png) | ![Logs](docs/screenshots/audit.png) |
 
 ---
 
