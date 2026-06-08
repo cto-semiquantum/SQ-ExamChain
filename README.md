@@ -37,6 +37,12 @@ Every year, examination papers leak before the exam causing widespread academic 
 - **AES-256 Encryption** — Papers are encrypted the moment they're uploaded. The original PDF never touches the disk unencrypted.
 - **JWT Authentication** — Separate role-based access for Admins and Examination Centers.
 - **bcrypt Password Hashing** — Passwords are never stored in plaintext.
+- **Role-Aware Route Guards** — Client-side React Router paths verify JWT `is_admin` claims, auto-routing unauthorized visitors (e.g. admins visiting `/center` or centers visiting `/admin`) back to their dashboards.
+- **Session Auto-bypass** — The login portal automatically detects valid sessions and redirects active users to their respective portals, preventing double sign-ins.
+
+### 🎨 Premium User Experience
+- **Responsive Light-Theme UI** — Clean, professional design with a light surface system, vibrant typography (Inter & Outfit), subtle gradients, and custom components.
+- **Consistent Sidebar Navigation** — Sidebar menus for both Admin and Center dashboards include fully configured tabs with custom placeholder pages to avoid broken links.
 
 ### 👁️ Invisible Fingerprinting
 Every downloaded PDF is dynamically embedded with a **hidden fingerprint** containing:
