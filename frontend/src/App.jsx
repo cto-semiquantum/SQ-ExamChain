@@ -8,6 +8,7 @@ import UploadExam       from './pages/UploadExam';
 import AssignExam       from './pages/AssignExam';
 import AuditLogs        from './pages/AuditLogs';
 import Investigate      from './pages/Investigate';
+import QuestionBank     from './pages/QuestionBank';
 import CenterDashboard  from './pages/CenterDashboard';
 import AdminLayout      from './components/AdminLayout';
 import './index.css';
@@ -100,6 +101,7 @@ export default function App() {
         {/* Admin */}
         <Route path="/admin"              element={<ProtectedRoute adminOnly><AdminDashboard /></ProtectedRoute>} />
         <Route path="/admin/exams"        element={<ProtectedRoute adminOnly><ExamsList /></ProtectedRoute>} />
+        <Route path="/admin/question-bank" element={<ProtectedRoute adminOnly><QuestionBank /></ProtectedRoute>} />
         <Route path="/admin/upload"       element={<ProtectedRoute adminOnly><UploadExam /></ProtectedRoute>} />
         <Route path="/admin/assign"       element={<ProtectedRoute adminOnly><AssignExam /></ProtectedRoute>} />
         <Route path="/admin/audit"        element={<ProtectedRoute adminOnly><AuditLogs /></ProtectedRoute>} />

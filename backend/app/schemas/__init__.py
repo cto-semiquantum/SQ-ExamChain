@@ -59,3 +59,37 @@ class AuditLogOut(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class SubjectCreate(BaseModel):
+    name: str
+
+
+class SubjectOut(BaseModel):
+    id: int
+    name: str
+
+    class Config:
+        from_attributes = True
+
+
+class QuestionCreate(BaseModel):
+    subject_id: int
+    question_text: str
+    topic: str
+    difficulty: str
+    marks: int
+
+
+class QuestionOut(BaseModel):
+    id: int
+    subject_id: int
+    question_text: str
+    topic: str
+    difficulty: str
+    marks: int
+    created_at: datetime
+    subject: SubjectOut
+
+    class Config:
+        from_attributes = True
