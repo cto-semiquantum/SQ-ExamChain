@@ -93,3 +93,40 @@ class QuestionOut(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class BlueprintRuleCreate(BaseModel):
+    subject_id: int
+    difficulty: str
+    question_count: int
+    marks: int
+
+
+class BlueprintRuleOut(BaseModel):
+    id: int
+    blueprint_id: int
+    subject_id: int
+    difficulty: str
+    question_count: int
+    marks: int
+    subject: SubjectOut
+
+    class Config:
+        from_attributes = True
+
+
+class BlueprintCreate(BaseModel):
+    name: str
+    total_marks: int
+    rules: List[BlueprintRuleCreate]
+
+
+class BlueprintOut(BaseModel):
+    id: int
+    name: str
+    total_marks: int
+    created_at: datetime
+    rules: List[BlueprintRuleOut]
+
+    class Config:
+        from_attributes = True
